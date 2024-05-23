@@ -32,5 +32,3 @@
 
 // console.log(spliceArr1); // [ 123n, Symbol(123) ]
 // console.log(myArr); //OP [ 0, 'rahul', 34, 59, true ];
-
-

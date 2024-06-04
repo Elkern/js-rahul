@@ -1,9 +1,19 @@
-//https://history.openweathermap.org/data/2.5/history/city?lat={lat}&lon={lon}&type=hour&start={start}&end={end}
-// lat 72.87
-// lon 18.65
-let p =fetch("https://history.openweathermap.org/data/2.5/history/city?lat=72.87&lon=18.65");
-p.then((res)=> {
-return res.json();
-}).then((res1)=> {
-    console.log(res1);
-})
+// Syntax for fetch api
+
+// let promise = fetch(url,[options]);
+
+
+let p ="https://cat-fact.herokuapp.com/facts";
+// p.then((res)=> {
+// return res.json();
+// }).then((res1)=> {          //Promise chaining      // Method 1
+//     console.log(res1);
+// })
+
+let getFacts = async () => {
+    let response = await fetch(p);
+    // console.log(response); //JSON Format
+    let data = await response.json();                //Mehod 2
+    console.log(data);
+}
+getFacts();

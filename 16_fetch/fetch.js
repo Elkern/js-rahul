@@ -14,6 +14,22 @@ let getFacts = async () => {
     let response = await fetch(p);
     // console.log(response); //JSON Format
     let data = await response.json();                //Mehod 2
-    console.log(data);
+    // console.log(data);
 }
 getFacts();
+
+const url = ('https://worldtimeapi.org/api/timezone/America/New_York');
+// url.then((value1) => {
+//     // console.log(value1);
+//     return value1.json();    //Call here only
+// }).then((response)=>{
+//     // let response = value2.json(); //doesn't work
+//     // console.log(response);
+// })
+
+async function  getData(){
+ let response = await fetch(url);
+ console.log(response);
+}
+getData();
+
